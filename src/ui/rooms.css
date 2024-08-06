@@ -1,0 +1,244 @@
+.property-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.property-list-title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.search-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px 40px;
+  font-size: 1em;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Ensure proper width on mobile devices */
+@media (max-width: 768px) {
+  .search-input {
+    width: calc(100% - 60px);
+    max-width: 100%;
+    padding: 10px 20px;
+  }
+}
+
+.search-input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7f8c8d;
+}
+
+.clear-search {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #7f8c8d;
+}
+
+.no-results {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 1.2em;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.property-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.property-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-content {
+  padding: 20px;
+}
+
+.property-name {
+  color: #34495e;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.property-description {
+  color: #7f8c8d;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.read-more {
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.property-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+}
+
+.property-amenities {
+  margin-bottom: 15px;
+}
+
+.amenities-title {
+  font-size: 1.2em;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.amenities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.amenity-item {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.expand-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: none;
+  border-top: 1px solid #ecf0f1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.expand-button:hover {
+  background-color: #ecf0f1;
+}
+
+.expanded-content {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ecf0f1;
+}
+
+/* .book-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+
+
+.book-button:hover {
+  background-color: #2980b9;
+} */
+.book-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.book-button:hover {
+  background-color: #2980b9;
+}
+
+.book-button:active {
+  transform: scale(0.98);
+}
+
+.icon-bed::before { content: '🛏️'; }
+.icon-users::before { content: '👥'; }
+.icon-bath::before { content: '🛁'; }
+.icon-maximize::before { content: '📐'; }
+
+@media (max-width: 768px) {
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+}
